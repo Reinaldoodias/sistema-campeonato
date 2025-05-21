@@ -10,6 +10,9 @@ public class Jogador {
     private String genero;
     private float altura;
 
+    //Atributo de controle
+    private Time time;
+
     public Jogador(String nome, LocalDate nascimento, String genero, double altura){
         if(nascimento.isAfter(LocalDate.now())){
             throw new IllegalArgumentException("Data de nascimento inválida");
@@ -22,6 +25,14 @@ public class Jogador {
         this.nascimento=nascimento;
         this.genero = genero;
         this.altura = (float) altura;
+    }
+
+    public boolean settime (Time time){
+        if(time != this.time && this.time != null){
+            return false;
+        }
+        this.time = time;
+        return true;
     }
 
     public int getId() {

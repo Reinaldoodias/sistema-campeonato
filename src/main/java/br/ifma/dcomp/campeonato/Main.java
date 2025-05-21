@@ -37,7 +37,8 @@ public class Main {
         time1.adicionarJogador(jogador1);
         Jogador jogador2 = new Jogador("Maria", LocalDate.of(1997, 3, 15), "F", 1.65);
         time1.adicionarJogador(jogador2);
-        System.out.println("Altura média do Flamengo: " + time1.getAlturaMedia() + " metros");
+        String altura_media = String.format("%.2f", time1.getAlturaMedia());
+        System.out.println("Altura média do Flamengo: " + altura_media + " metros");
 
         // 4. Criar partida válida
         System.out.println("\n=== Teste 4: Criar partida válida ===");

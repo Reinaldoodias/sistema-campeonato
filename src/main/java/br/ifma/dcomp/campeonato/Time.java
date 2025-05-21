@@ -21,7 +21,7 @@ public class Time {
         if (jogador == null) {
             throw new IllegalArgumentException("Jogador inválido");
         }
-        if (jogadores.contains(jogador)) {
+        if (!jogador.settime(this)) {
             throw new IllegalArgumentException("Jogador já está no time");
         }
         jogadores.add(jogador);
